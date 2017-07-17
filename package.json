@@ -1,0 +1,14 @@
+{
+  "name": "BuildExeTool",
+  "version": "1.0.0",
+  "description": "a tool for build exe",
+  "main": "build.js",
+  "scripts": {
+    "start": "node build.js"
+  },
+  "author": "liguanjian",
+  "license": "ISC",
+  "dependencies": {
+    "nw-builder":""
+  }
+}

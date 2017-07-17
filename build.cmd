@@ -1,2 +1,2 @@
-cd C:\Users\liguanjian\Desktop\nw
-node build
+cd %~d0
+npm start
