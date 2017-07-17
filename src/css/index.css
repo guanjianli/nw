@@ -1,0 +1,15 @@
+.main {
+	padding:0.5rem 0.75rem;
+}
+.title{
+	color:black !important;
+	font-size: 1.5rem !important;
+}
+
+.menu-label{
+	font-size:1.2rem !important;
+}
+
+.part{
+	display: none;
+}

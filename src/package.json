@@ -1,0 +1,30 @@
+{
+  "name": "pjg配置工具",
+  "version": "1.0.0",
+  "description": "a tool for build config",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ext.js",
+    "nohup": "nohup node ext.js &"
+  },
+  "author": "liguanjian",
+  "license": "ISC",
+  "dependencies": {
+    "underscore":""
+  },
+  "window": {
+        "title": "tools",
+        "icon": "48.png",
+        "toolbar": false,
+        "frame": true,
+        "width": 960,
+        "height": 600,
+        "position": "center",
+        "min_width": 960,
+        "min_height": 600,
+        "max_width": 1440,
+        "max_height": 900,
+		"resizable": true
+  }
+}

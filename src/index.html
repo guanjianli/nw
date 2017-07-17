@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./css/bulma.css"/>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+	<!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+	<title>tools</title>
+</head>
+
+<body>
+
+<nav class="nav">
+    <div class="nav-left">
+        <a class="nav-item title">
+            <span class="icon">
+              <i class="fa fa-magic"></i>
+            </span>&nbsp;PJA TEST TOOL SYSTEM
+        </a>
+    </div>
+
+    <div class="nav-center">
+        <a class="nav-item">
+      <span class="icon">
+        <i class="fa fa-github"></i>
+      </span>
+        </a>
+        <a class="nav-item">
+      <span class="icon">
+        <i class="fa fa-wifi" onclick="alert('wifi密码是12345678')"></i>
+      </span>
+        </a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item">
+            Home
+        </a>
+        <a class="nav-item">
+            Documentation
+        </a>
+        <a class="nav-item">
+            Blog
+        </a>
+
+        <span class="nav-item">
+      <a class="button">
+        <span class="icon">
+          <i class="fa fa-bug"></i>
+        </span>
+        <span>Fire Bug</span>
+      </a>
+      <a class="button is-primary">
+        <span class="icon">
+          <i class="fa fa-download"></i>
+        </span>
+        <span>Download</span>
+      </a>
+    </span>
+    </div>
+</nav>
+<div class="columns main">
+    <!--左侧菜单-->
+    <aside class="menu column is-one-quarter">
+        <p class="menu-label">
+            <i class="fa fa-bars">PJG工具</i>
+        </p>
+        <ul class="menu-list">
+            <li><a tarId="p1" class="is-active">PJG工具1</a></li>
+            <li><a tarId="p2">PJG工具2</a></li>
+            <li><a tarId="p3">PJG工具3</a></li>
+        </ul>
+
+        <p class="menu-label">
+            <i class="fa fa-bars">未定菜单三缺一</i>
+        </p>
+        <ul class="menu-list">
+            <li><a tarId="p4">发财求菜单</a></li>
+            <li><a tarId="p5">红中求菜单</a></li>
+            <li><a tarId="p6">白板求菜单</a></li>
+        </ul>
+    </aside>
+
+    <!--右侧内容 p1-->
+    <div class="column part" id="p1">
+        <!--告示-->
+        <article class="message is-info">
+            <div class="message-header">
+                <p>帮助信息</p>
+                <button class="delete"></button>
+            </div>
+            <div class="message-body">
+                1.注意1<br/>
+                2.注意2<br/>
+                3.注意3
+            </div>
+        </article>
+        <!--这是一个提交框-->
+        <article class="media">
+            <div class="media-content">
+                <p class="control">
+                    <textarea class="textarea txtP1" placeholder="$/PJG/xxx/xxx/xxx/btn.png"></textarea>
+                </p>
+                <nav class="level">
+                    <div class="level-left">
+
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <a class="button is-info subP1">提交</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div>
+
+    <!--右侧内容 p2-->
+    <div class="column part" id="p2">
+        <!--告示-->
+        <article class="message is-info">
+            <div class="message-header">
+                <p>帮助信息</p>
+                <button class="delete"></button>
+            </div>
+            <div class="message-body">
+                菜单二暂无内容
+            </div>
+        </article>
+
+    </div>
+
+    <!--右侧内容 p3-->
+    <div class="column part" id="p3">
+        <!--告示-->
+        <article class="message is-info">
+            <div class="message-header">
+                <p>帮助信息</p>
+                <button class="delete"></button>
+            </div>
+            <div class="message-body">
+                菜单三暂无内容
+            </div>
+        </article>
+
+    </div>
+</div>
+<div class="modal mP1">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <article class="message is-success">
+            <div class="message-header">
+                <p>Success</p>
+                <button class="delete"></button>
+            </div>
+            <div class="message-body">
+                提交文件成功
+            </div>
+        </article>
+    </div>
+    <button class="modal-close"></button>
+</div>
+</body>
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/index.js"></script>
+
+<script>
+var util = require("./util.js");
+util.recursiveDirSync('.', (f)=>{console.log(f);});
+</script>
+
+</html>
