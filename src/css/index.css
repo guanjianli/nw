@@ -1,15 +1,62 @@
 .main {
-	padding:0.5rem 0.75rem;
-}
-.title{
-	color:black !important;
-	font-size: 1.5rem !important;
+    padding: 0.5rem 0.75rem;
 }
 
-.menu-label{
-	font-size:1.2rem !important;
+.title {
+    color: black !important;
+    font-size: 1.5rem !important;
 }
 
-.part{
-	display: none;
+.menu-label {
+    font-size: 1.2rem !important;
 }
+
+.part {
+    display: none;
+}
+
+.nav {
+    border-bottom: 1px solid #ddd;
+}
+
+#selectM {
+    width: 100%;
+}
+
+#selectP {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    border-radius: 0 !important;
+}
+
+.dia_name, .dia_id {
+    width: 45%;
+
+}
+
+.oh {
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+#tx_show {
+    margin-top: 10px;
+    height: 372px;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.exec_btn{margin-top: 15px;margin-left: 15px;}

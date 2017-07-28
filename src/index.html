@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="./css/bulma.css"/>
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/index.css">
-	<!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
-	<title>tools</title>
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    <title>tools</title>
 </head>
 
 <body>
@@ -16,41 +16,31 @@
         <a class="nav-item title">
             <span class="icon">
               <i class="fa fa-magic"></i>
-            </span>&nbsp;PJA TEST TOOL SYSTEM
+            </span>&nbsp;PJG TOOL SYSTEM
         </a>
     </div>
 
     <div class="nav-center">
         <a class="nav-item">
       <span class="icon">
-        <i class="fa fa-github"></i>
+        <i class="fa fa-cloud"></i>
       </span>
         </a>
         <a class="nav-item">
       <span class="icon">
-        <i class="fa fa-wifi" onclick="alert('wifi密码是12345678')"></i>
+        <i class="fa fa-television"></i>
       </span>
         </a>
     </div>
 
-    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
     <span class="nav-toggle">
     <span></span>
     <span></span>
     <span></span>
   </span>
-
-
     <div class="nav-right nav-menu">
         <a class="nav-item">
-            Home
-        </a>
-        <a class="nav-item">
             Documentation
-        </a>
-        <a class="nav-item">
-            Blog
         </a>
 
         <span class="nav-item">
@@ -60,12 +50,6 @@
         </span>
         <span>Fire Bug</span>
       </a>
-      <a class="button is-primary">
-        <span class="icon">
-          <i class="fa fa-download"></i>
-        </span>
-        <span>Download</span>
-      </a>
     </span>
     </div>
 </nav>
@@ -73,56 +57,75 @@
     <!--左侧菜单-->
     <aside class="menu column is-one-quarter">
         <p class="menu-label">
-            <i class="fa fa-bars">PJG工具</i>
+            <i class="fa fa-bars">工具集</i>
         </p>
         <ul class="menu-list">
-            <li><a tarId="p1" class="is-active">PJG工具1</a></li>
-            <li><a tarId="p2">PJG工具2</a></li>
-            <li><a tarId="p3">PJG工具3</a></li>
+            <li><a tarId="p1" class="is-active">剧情对话工具</a></li>
+            <li><a tarId="p2">Excel数据导出工具</a></li>
+            <li><a tarId="p3">xxx导出工具</a></li>
         </ul>
 
-        <p class="menu-label">
-            <i class="fa fa-bars">未定菜单三缺一</i>
-        </p>
-        <ul class="menu-list">
-            <li><a tarId="p4">发财求菜单</a></li>
-            <li><a tarId="p5">红中求菜单</a></li>
-            <li><a tarId="p6">白板求菜单</a></li>
-        </ul>
     </aside>
 
     <!--右侧内容 p1-->
     <div class="column part" id="p1">
-        <!--告示-->
-        <article class="message is-info">
-            <div class="message-header">
-                <p>帮助信息</p>
-                <button class="delete"></button>
-            </div>
-            <div class="message-body">
-                1.注意1<br/>
-                2.注意2<br/>
-                3.注意3
-            </div>
-        </article>
-        <!--这是一个提交框-->
-        <article class="media">
-            <div class="media-content">
-                <p class="control">
-                    <textarea class="textarea txtP1" placeholder="$/PJG/xxx/xxx/xxx/btn.png"></textarea>
-                </p>
-                <nav class="level">
-                    <div class="level-left">
-
+        <div class="columns">
+            <div class="column is-5">
+                <div><input class="input" type="text" placeholder="输入搜索的ID或者对话名称"/></div>
+                <div id="selectP" class="select is-multiple">
+                    <select multiple size="10" id="selectM">
+                        <option value="10001">10001-你的名字</option>
+                        <option value="10003">10003-你的名字</option>
+                        <option value="10003">10003-你的名字</option>
+                        <option value="10004">10004-你的名字</option>
+                        <option value="10005">10005-你的名字</option>
+                        <option value="10006">10006-你的名字</option>
+                        <option value="10007">10007-你的名字</option>
+                        <option value="10008">10008-你的名字</option>
+                        <option value="10009">10009-你的名字</option>
+                        <option value="10010">10010-你的名字</option>
+                        <option value="10011">10011-你的名字</option>
+                        <option value="10012">10012-你的名字</option>
+                        <option value="10012">10012-你的名字</option>
+                        <option value="10012">10012-你的名字</option>
+                        <option value="10012">10012-你的名字</option>
+                        <option value="10012">10012-你的名字</option>
+                        <option value="10012">10012-你的名字</option>
+                        <option value="10012">10012-你的名字</option>
+                    </select>
+                </div>
+                <div class="columns">
+                    <div class="field column">
+                        <p class="btn">
+                            <button class="button is-primary">
+                                删除选中对话
+                            </button>
+                        </p>
                     </div>
-                    <div class="level-right">
-                        <div class="level-item">
-                            <a class="button is-info subP1">提交</a>
-                        </div>
+                    <div class="field column">
+                        <p class="btn">
+                            <button class="button is-primary">
+                                添加新的对话
+                            </button>
+                        </p>
                     </div>
-                </nav>
+                </div>
             </div>
-        </article>
+            <div class="column is-7">
+                <div class="oh">
+                    <input class="input dia_id fl" type="text" placeholder="对话ID" disabled/><input
+                        class="input dia_name fr" type="text" placeholder="对话名称"/>
+                </div>
+                <div>
+                    <textarea class="textarea" id="tx_show" placeholder=""></textarea>
+                </div>
+                <div class="oh">
+                    <button class="button fr exec_btn is-primary">上传文件</button>
+                    <button class="button fr exec_btn is-primary">保存</button>
+                    <button class="button fr exec_btn is-primary">编辑执行内容</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--右侧内容 p2-->
@@ -130,11 +133,11 @@
         <!--告示-->
         <article class="message is-info">
             <div class="message-header">
-                <p>帮助信息</p>
+                <p>配置信息</p>
                 <button class="delete"></button>
             </div>
             <div class="message-body">
-                菜单二暂无内容
+                暂无内容
             </div>
         </article>
 
@@ -145,11 +148,11 @@
         <!--告示-->
         <article class="message is-info">
             <div class="message-header">
-                <p>帮助信息</p>
+                <p>配置信息</p>
                 <button class="delete"></button>
             </div>
             <div class="message-body">
-                菜单三暂无内容
+                暂无内容
             </div>
         </article>
 
@@ -175,8 +178,16 @@
 <script src="./js/index.js"></script>
 
 <script>
-var util = require("./util.js");
-util.recursiveDirSync('.', (f)=>{console.log(f);});
+
+    var clickDown = function (e) {
+        var util = require("./util.js");
+        util.recursiveDirSync('.', (f) = > {$('#myConsole'
+        ).
+        text($('#myConsole').text() + f)
+    })
+        ;
+    }
+
 </script>
 
 </html>
