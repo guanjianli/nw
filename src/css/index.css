@@ -59,4 +59,9 @@ input, select, textarea {
     margin-top: 15px;
 }
 
-.exec_btn{margin-top: 15px;margin-left: 15px;}
+.exec_btn {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#selectLocFile{display: none;}
