@@ -41,12 +41,20 @@ input, select, textarea, div {
     overflow: hidden;
 }
 
+.tc {
+    text-align: center
+}
+
 .fl {
     float: left;
 }
 
 .fr {
     float: right;
+}
+
+.m15 {
+    margin: 15px;
 }
 
 #tx_show {
@@ -69,17 +77,51 @@ input, select, textarea, div {
     display: none;
 }
 
-.dia_item:hover{
+.dia_item:hover {
     color: #00d1b2;
 }
-.dia_item{
+
+.dia_item {
     color: #363636;
     display: block;
     border-bottom: 1px solid #ddd;
     padding: 6px;
 }
 
-.on_dia_item{
+.on_dia_item {
     color: #000000 !important;
     background: #a5c5f7 !important;
 }
+
+.sel_box {
+    margin-top: 10px;
+    height: 372px;
+    padding: 0;
+    overflow: auto;
+}
+
+.act_group {
+    margin: 5px 5px 5px 18px;
+}
+
+.act_name {
+
+}
+
+.on_act_item {
+    color: #000000 !important;
+    background: #a5c5f7 !important;
+}
+
+.act_item:hover {
+    color: #00d1b2;
+}
+
+
+.act_item,.evt_item{
+    padding: 6px 6px 6px 45px;
+    color: #363636;
+    display: block;
+    background: #fff;
+}
+.fa-sort-desc{padding-right: 5px;}

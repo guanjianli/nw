@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./css/bulma.css"/>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    <title>tools</title>
+</head>
+
+<body>
+
+
+<div class="columns main">
+
+
+            <div class="column is-3">
+                <p type="text" >添加动作</p>
+
+                <div class="textarea sel_box" >
+                    <div>
+                        <p class="act_group"><i class="fa fa-sort-desc" aria-hidden="true"></i>角色</p>
+                        <a class="act_item">角色名字</a>
+                        <a class="act_item">角色模型</a>
+                        <a class="act_item">角色动作</a>
+                        <a class="act_item">角色位置</a>
+                    </div>
+                    <div>
+                        <p class="act_group"><i class="fa fa-sort-desc" aria-hidden="true"></i>对话</p>
+                        <a class="act_item">对话属性</a>
+                        <a class="act_item">设置文本</a>
+                        <a class="act_item">设置音频</a>
+                    </div>
+                    <div>
+                        <p class="act_group"><i class="fa fa-sort-desc" aria-hidden="true"></i>场景</p>
+                        <a class="act_item">设置场景</a>
+                    </div>
+                    <div>
+                        <p class="act_group"><i class="fa fa-sort-desc" aria-hidden="true"></i>黑屏</p>
+                        <a class="act_item">全黑屏</a>
+                    </div>
+                </div>
+
+                <div class="oh tc">
+                    <button class="button exec_btn is-primary m15">添加新事件</button>
+                </div>
+            </div>
+
+            <div class="column is-4">
+                <p type="text" >组织动作</p>
+
+                <div class="textarea sel_box" >
+                    <div>
+                        <p class="act_group"><i class="fa fa-sort-desc" aria-hidden="true"></i>事件</p>
+                        <div id="act_box">
+                            <a class="evt_item">角色名字</a>
+                            <a class="evt_item">角色模型</a>
+                            <a class="evt_item">调用动作</a>
+                            <a class="evt_item">NPC位置</a>
+                            <a class="evt_item">对话属性</a>
+                            <a class="evt_item">对话文本</a>
+                            <a class="evt_item">音频</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    <div class="column is-5">
+        <p type="text" >编辑动作</p>
+
+        <div class="textarea sel_box" >
+
+        </div>
+        <div class="oh">
+            <button class="button exec_btn is-primary fr" onclick="window.close();">取消</button><button class="button exec_btn is-primary fr">保存</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="modal mP1">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <article class="message is-danger">
+            <div class="message-header">
+                <p>Error!</p>
+                <button class="delete"></button>
+            </div>
+            <div class="message-body">
+
+            </div>
+        </article>
+    </div>
+    <!--<button class="modal-close"></button>-->
+</div>
+
+</body>
+<script src="./js/jquery-3.1.1.min.js"></script>
+
+<script src="editor.js"></script>
+
+</html>

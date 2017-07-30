@@ -41,12 +41,12 @@ var updateAttrs = (id)=> {
     var d = _.findWhere(curDialogsData, {id: parseInt(id)});
     if (d) {
         d = d.list;//_.omit(d, ["id", "name"]);
-        _.map(d, function(it,idx){
+        _.map(d, function (it, idx) {
             var tx = "";
             _.map(it, (v, k)=> {
                 tx += (" \<" + attrMap[k] + "/" + v + "\> ");
             });
-            box.append('<a class="dia_item" idx="'+idx+'">'+ (idx+1) + ". " + tx+ '</a>');
+            box.append('<a class="dia_item" idx="' + idx + '">' + (idx + 1) + ". " + tx + '</a>');
         });
     }
 };
@@ -90,36 +90,58 @@ $("#searchgroup").on('input', function () {
 
 //点击选定某一个对话,后续是编辑
 var curSelectIndex;
-$("#tx_show").on("click", ".dia_item", function(e){
+$("#tx_show").on("click", ".dia_item", function (e) {
     $(".dia_item").removeClass("on_dia_item");
     $(this).addClass("on_dia_item");
     curSelectIndex = parseInt($(this).attr("idx"));
 });
 
 //新加一个对话
-$("#btnNewDia").on("click", function(){
+$("#btnNewDia").on("click", function () {
     var nextIndex;
-    if(curDialogsData && curDialogsData.length > 0){
+    if (curDialogsData && curDialogsData.length > 0) {
         nextIndex = _.max(_.pluck(curDialogsData, 'id'));
-        nextIndex ++;
-    }else{
+        nextIndex++;
+    } else {
         nextIndex = 50000;
         curDialogsData = [];
     }
-    curDialogsData.push({id:nextIndex, name:"默认名称"});
+    curDialogsData.push({id: nextIndex, name: "默认名称"});
     setDataInSelect(curDialogsData);
+    selectId = null;
 });
 
 //删除一个对话
-$("#btnDelDia").on("click", function(){
-    if(selectId){
+$("#btnDelDia").on("click", function () {
+    if (selectId) {
         curDialogsData = _.filter(curDialogsData, (it, idx)=> {
             return it.id.toString() != selectId;
         });
         selectId = null;
         setDataInSelect(curDialogsData);
         updateAttrs(selectId);
-    }else{
+    } else {
         showErrorTips("温馨提示->未选中要删除的项", "is-info");
     }
 });
+
+var winObj;
+function editData() {
+    if (!selectId) {
+        showErrorTips("温馨提示->未选中编辑对象", "is-info");
+        return;
+    }
+    if (winObj) {
+        showErrorTips("温馨提示->你正在编辑ing一个窗口,请先保存或者关闭", "is-info");
+        return;
+    }
+    winObj = window.open("editor.html?id=" + selectId);
+    var loop = setInterval(function () {
+        if (winObj.closed) {
+            clearInterval(loop);
+            winObj = null;
+            console.log('had closed');
+            loadSelect();
+        }
+    }, 500);
+}
