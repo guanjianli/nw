@@ -1,46 +1,74 @@
 {
-  "dialogs":[{
-    "id":10001,
-    "name":"剧情对话1",
-    "role_name":"龙井虾仁",
-    "role_id":"1025",
-    "action":"2001",
-    "location":"左"
-  },{
-    "id":10002,
-    "name":"剧情对话2",
-    "role_name":"青团",
-    "role_id":"1325",
-    "action":"2001",
-    "location":"左",
-    "audio_id":"54832",
-    "content":"i am fine."
-  },{
-    "id":10003,
-    "name":"剧情对话3",
-    "role_name":"鹄羹",
-    "role_id":"3434",
-    "action":"62345",
-    "location":"右",
-    "audio_id":"54832",
-    "content":"what is your name?"
-  },{
-    "id":10004,
-    "name":"剧情对话2"
-  },{
-    "id":10005,
-    "name":"剧情对话3"
-  },{
-    "id":10006,
-    "name":"剧情对话2"
-  },{
-    "id":10007,
-    "name":"剧情对话B"
-  },{
-    "id":10008,
-    "name":"剧情对话A"
-  },{
-    "id":10009,
-    "name":"剧情对话7"
-  }]
+  "dialogs": [
+    {
+      "id": 10001,
+      "name": "剧情对话1",
+      "content": [
+        {
+          "role_name": "龙井虾仁",
+          "role_id": "1025",
+          "action": "2001",
+          "location": "左"
+        },
+        {
+          "role_name": "青团",
+          "role_id": "1024",
+          "action": "2005",
+          "location": "左"
+        },
+        {
+          "role_name": "龙井虾仁",
+          "role_id": "3434",
+          "action": "62345",
+          "location": "右",
+          "audio_id": "54832",
+          "content": "what is your name?"
+        }
+      ]
+    },
+    {
+      "id": 10002,
+      "name": "剧情对话2",
+      "role_name": "青团",
+      "role_id": "1325",
+      "action": "2001",
+      "location": "左",
+      "audio_id": "54832",
+      "content": "i am fine."
+    },
+    {
+      "id": 10003,
+      "name": "剧情对话3",
+      "role_name": "鹄羹",
+      "role_id": "3434",
+      "action": "62345",
+      "location": "右",
+      "audio_id": "54832",
+      "content": "what is your name?"
+    },
+    {
+      "id": 10004,
+      "name": "剧情对话2"
+    },
+    {
+      "id": 10005,
+      "name": "剧情对话3"
+    },
+    {
+      "id": 10006,
+      "name": "剧情对话2"
+    },
+    {
+      "id": 10007,
+      "name": "剧情对话B"
+    },
+    {
+      "id": 10008,
+      "name": "剧情对话A"
+    },
+    {
+      "id": 10009,
+      "name": "剧情对话7"
+    }
+  ]
 }

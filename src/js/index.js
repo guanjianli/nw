@@ -1,9 +1,12 @@
 /**
  * Created by liguanjian on 2017-3-3.
  */
-var showErrorTips = function(tx){
+var showErrorTips = function(tx, type){
     $(".mP1 .message-body").text(tx);
     $(".mP1").addClass("is-active");
+    if(type){
+        $(".message").removeClass("is-danger").addClass(type)
+    }
 };
 
 $(function () {
@@ -20,7 +23,7 @@ $(function () {
     // })
 
 
-    $(".modal-close, .modal .delete").on("click", function () {
+    $(".modal-close, .modal .delete, .modal-background").on("click", function () {
         $(".modal").removeClass("is-active");
     })
 });

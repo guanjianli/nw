@@ -36,13 +36,17 @@ var updateAttrs = (id)=> {
         "location": "角色位置", "content": "对话内容",
         "audio_id": "音频ID"
     };
-    var tx = $("#tx_show");
-    tx.val('');
+    var box = $("#tx_show");
+    box.empty();
     var d = _.findWhere(curDialogsData, {id: parseInt(id)});
     if (d) {
-        d = _.omit(d, ["id", "name"]);
-        _.map(d, (v, k)=> {
-            tx.val(tx.val() + " \<" + attrMap[k] + "/" + v + "\> ");
+        d = d.list;//_.omit(d, ["id", "name"]);
+        _.map(d, function(it,idx){
+            var tx = "";
+            _.map(it, (v, k)=> {
+                tx += (" \<" + attrMap[k] + "/" + v + "\> ");
+            });
+            box.append('<a class="dia_item" idx="'+idx+'">'+ (idx+1) + ". " + tx+ '</a>');
         });
     }
 };
@@ -58,6 +62,8 @@ $('#selectM').change(function () {
     $(".dia_name").val(selectName);
     updateAttrs(selectId);
 });
+//添加一个对话
+
 
 //文件选择后的反应
 $('#selectLocFile').on("change", function () {
@@ -80,4 +86,40 @@ $("#searchgroup").on('input', function () {
         return it.id.toString().indexOf(v) != -1 || it.name.toString().indexOf(v) != -1;
     });
     setDataInSelect(d);
+});
+
+//点击选定某一个对话,后续是编辑
+var curSelectIndex;
+$("#tx_show").on("click", ".dia_item", function(e){
+    $(".dia_item").removeClass("on_dia_item");
+    $(this).addClass("on_dia_item");
+    curSelectIndex = parseInt($(this).attr("idx"));
+});
+
+//新加一个对话
+$("#btnNewDia").on("click", function(){
+    var nextIndex;
+    if(curDialogsData && curDialogsData.length > 0){
+        nextIndex = _.max(_.pluck(curDialogsData, 'id'));
+        nextIndex ++;
+    }else{
+        nextIndex = 50000;
+        curDialogsData = [];
+    }
+    curDialogsData.push({id:nextIndex, name:"默认名称"});
+    setDataInSelect(curDialogsData);
+});
+
+//删除一个对话
+$("#btnDelDia").on("click", function(){
+    if(selectId){
+        curDialogsData = _.filter(curDialogsData, (it, idx)=> {
+            return it.id.toString() != selectId;
+        });
+        selectId = null;
+        setDataInSelect(curDialogsData);
+        updateAttrs(selectId);
+    }else{
+        showErrorTips("温馨提示->未选中要删除的项", "is-info");
+    }
 });

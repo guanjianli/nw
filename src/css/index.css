@@ -28,7 +28,7 @@
     margin-top: 10px;
 }
 
-input, select, textarea {
+input, select, textarea, div {
     border-radius: 0 !important;
 }
 
@@ -52,6 +52,7 @@ input, select, textarea {
 #tx_show {
     margin-top: 10px;
     height: 372px;
+    padding: 0;
 }
 
 .btn {
@@ -64,4 +65,21 @@ input, select, textarea {
     margin-left: 15px;
 }
 
-#selectLocFile{display: none;}
+#selectLocFile {
+    display: none;
+}
+
+.dia_item:hover{
+    color: #00d1b2;
+}
+.dia_item{
+    color: #363636;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 6px;
+}
+
+.on_dia_item{
+    color: #000000 !important;
+    background: #a5c5f7 !important;
+}
